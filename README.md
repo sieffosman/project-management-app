@@ -1,6 +1,28 @@
+Project Management App
 
-A project management/research collaboration project I am working on... 
-I am working on setting up the app's database, creating its components and UI, and implementing user authentication, registration, and log in.
+A simple project management application built with React.
 
-Please use the link below to preview it when it goes live:
-                                                          Loading... Please wait.
+## Usage
+
+- View and manage projects.
+- Add new projects.
+- Delete existing projects.
+
+## Project Structure
+
+- `src/App.js`: Main component for managing projects.
+- `src/Project.js`: Component for displaying individual projects.
+- `src/AddProjectForm.js`: Component for adding new projects.
+
+## Styling
+
+- Styling is done using CSS classes.
+- Customize styles in the `src` directory.
+
+## Contributing
+
+You can feel free to contribute by creating a pull request or opening an issue.
+
+## License
+
+MIT License
