@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Project from './Project';
+import AddProjectForm from './AddProjectForm';
 
 function App() {
+  const [projects, setProjects] = useState([]);
+
+  const addProject = (project) => {
+    setProjects([...projects, project]);
+  };
+
+  const deleteProject = (id) => {
+    const updatedProjects = projects.filter((project) => project.id !== id);
+    setProjects(updatedProjects);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Project Management App</h1>
+      <AddProjectForm addProject={addProject} />
+      <ul>
+        {projects.map((project) => (
+          <Project key={project.id} project={project} onDelete={deleteProject} />
+        ))}
+      </ul>
     </div>
   );
 }
