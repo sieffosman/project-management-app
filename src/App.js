@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Project from '.';
 import AddProjectForm from './AddProjectForm';
+import './App.css';
+
 
 function App() {
   const [projects, setProjects] = useState([]);
